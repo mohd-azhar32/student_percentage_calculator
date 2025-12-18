@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Result Web Application</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Total Marks</th>
+        <th>Percentage</th>
+        <th>Division</th>
+    </tr>
+
+    {% for r in results %}
+    <tr>
+        <td>{{ r.name }}</td>
+        <td>{{ r.total }}</td>
+        <td>{{ r.percentage }} %</td>
+        <td>{{ r.division }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
